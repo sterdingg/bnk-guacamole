@@ -1,0 +1,650 @@
+[
+    {
+        "bnk_state_id": 1,
+        "bnk_state": "ADILABAD"
+    },
+    {
+        "bnk_state_id": 2,
+        "bnk_state": "AHMADABAD"
+    },
+    {
+        "bnk_state_id": 3,
+        "bnk_state": "AJMER"
+    },
+    {
+        "bnk_state_id": 4,
+        "bnk_state": "AMRELI"
+    },
+    {
+        "bnk_state_id": 5,
+        "bnk_state": "ANDAMAN AND NICOBAR"
+    },
+    {
+        "bnk_state_id": 6,
+        "bnk_state": "ANDAMAN AND NICOBAR ISLAND"
+    },
+    {
+        "bnk_state_id": 7,
+        "bnk_state": "ANDAMANANDNICOBAR"
+    },
+    {
+        "bnk_state_id": 8,
+        "bnk_state": "ANDHRA PRADESH"
+    },
+    {
+        "bnk_state_id": 9,
+        "bnk_state": "ANDHRAPRADESH"
+    },
+    {
+        "bnk_state_id": 10,
+        "bnk_state": "AP"
+    },
+    {
+        "bnk_state_id": 11,
+        "bnk_state": "ARUNACHAL PRADESH"
+    },
+    {
+        "bnk_state_id": 12,
+        "bnk_state": "ASSAM"
+    },
+    {
+        "bnk_state_id": 13,
+        "bnk_state": "BADGAM"
+    },
+    {
+        "bnk_state_id": 14,
+        "bnk_state": "BAGALKOTE"
+    },
+    {
+        "bnk_state_id": 15,
+        "bnk_state": "BANAS KANTHA"
+    },
+    {
+        "bnk_state_id": 16,
+        "bnk_state": "BANGALORE RURAL"
+    },
+    {
+        "bnk_state_id": 17,
+        "bnk_state": "BANGALORE URBAN"
+    },
+    {
+        "bnk_state_id": 18,
+        "bnk_state": "BARA BANKI"
+    },
+    {
+        "bnk_state_id": 19,
+        "bnk_state": "BASTAR"
+    },
+    {
+        "bnk_state_id": 20,
+        "bnk_state": "BELLARY"
+    },
+    {
+        "bnk_state_id": 21,
+        "bnk_state": "BHARUCH"
+    },
+    {
+        "bnk_state_id": 22,
+        "bnk_state": "BHAVNAGAR"
+    },
+    {
+        "bnk_state_id": 23,
+        "bnk_state": "BIHAR"
+    },
+    {
+        "bnk_state_id": 24,
+        "bnk_state": "BILASPUR"
+    },
+    {
+        "bnk_state_id": 25,
+        "bnk_state": "BUDAUN"
+    },
+    {
+        "bnk_state_id": 26,
+        "bnk_state": "CG"
+    },
+    {
+        "bnk_state_id": 27,
+        "bnk_state": "CHANDIGARH"
+    },
+    {
+        "bnk_state_id": 28,
+        "bnk_state": "CHANDIGARH UT"
+    },
+    {
+        "bnk_state_id": 29,
+        "bnk_state": "CHATTISGARH"
+    },
+    {
+        "bnk_state_id": 30,
+        "bnk_state": "CHHATISGARH"
+    },
+    {
+        "bnk_state_id": 31,
+        "bnk_state": "CHHATISHGARH"
+    },
+    {
+        "bnk_state_id": 32,
+        "bnk_state": "CHHATTISGARH"
+    },
+    {
+        "bnk_state_id": 33,
+        "bnk_state": "CHIKMAGALUR"
+    },
+    {
+        "bnk_state_id": 34,
+        "bnk_state": "CHITRAKOOT"
+    },
+    {
+        "bnk_state_id": 35,
+        "bnk_state": "COIMBATORE"
+    },
+    {
+        "bnk_state_id": 36,
+        "bnk_state": "DADRA"
+    },
+    {
+        "bnk_state_id": 37,
+        "bnk_state": "DADRA & NAGAR HAVELI"
+    },
+    {
+        "bnk_state_id": 38,
+        "bnk_state": "DADRA AND NAGAR HAVELI"
+    },
+    {
+        "bnk_state_id": 39,
+        "bnk_state": "DAKSHIN KANNAD"
+    },
+    {
+        "bnk_state_id": 40,
+        "bnk_state": "DAMAN"
+    },
+    {
+        "bnk_state_id": 41,
+        "bnk_state": "DAMAN AND DIU"
+    },
+    {
+        "bnk_state_id": 42,
+        "bnk_state": "DAMANANDDIU"
+    },
+    {
+        "bnk_state_id": 43,
+        "bnk_state": "DANTEWADA"
+    },
+    {
+        "bnk_state_id": 44,
+        "bnk_state": "DEHRA DUN"
+    },
+    {
+        "bnk_state_id": 45,
+        "bnk_state": "DELHI"
+    },
+    {
+        "bnk_state_id": 46,
+        "bnk_state": "EAST GODAVARI"
+    },
+    {
+        "bnk_state_id": 47,
+        "bnk_state": "ERNAKULAM"
+    },
+    {
+        "bnk_state_id": 48,
+        "bnk_state": "ERODE"
+    },
+    {
+        "bnk_state_id": 49,
+        "bnk_state": "FEROZPUR"
+    },
+    {
+        "bnk_state_id": 50,
+        "bnk_state": "GAUTAM BUDDHA NAGAR"
+    },
+    {
+        "bnk_state_id": 51,
+        "bnk_state": "GOA"
+    },
+    {
+        "bnk_state_id": 52,
+        "bnk_state": "GREATER BOMBAY"
+    },
+    {
+        "bnk_state_id": 53,
+        "bnk_state": "GUJARAT"
+    },
+    {
+        "bnk_state_id": 54,
+        "bnk_state": "GUJRAT"
+    },
+    {
+        "bnk_state_id": 55,
+        "bnk_state": "GURDASPUR"
+    },
+    {
+        "bnk_state_id": 56,
+        "bnk_state": "HARKHAND"
+    },
+    {
+        "bnk_state_id": 57,
+        "bnk_state": "HARYANA"
+    },
+    {
+        "bnk_state_id": 58,
+        "bnk_state": "HIMACHAL PRADESH"
+    },
+    {
+        "bnk_state_id": 59,
+        "bnk_state": "HIMACHALPRADESH"
+    },
+    {
+        "bnk_state_id": 60,
+        "bnk_state": "HIMANCHALPRADESH"
+    },
+    {
+        "bnk_state_id": 61,
+        "bnk_state": "HUGLI"
+    },
+    {
+        "bnk_state_id": 62,
+        "bnk_state": "JALPAIGURI"
+    },
+    {
+        "bnk_state_id": 63,
+        "bnk_state": "JAMMU AND KASHMIR"
+    },
+    {
+        "bnk_state_id": 64,
+        "bnk_state": "JAMMUANDKASHMIR"
+    },
+    {
+        "bnk_state_id": 65,
+        "bnk_state": "JANJGIR CHAMPA"
+    },
+    {
+        "bnk_state_id": 66,
+        "bnk_state": "JHAGRAKHAND COLLIERY"
+    },
+    {
+        "bnk_state_id": 67,
+        "bnk_state": "JHARKHAND"
+    },
+    {
+        "bnk_state_id": 68,
+        "bnk_state": "JIND"
+    },
+    {
+        "bnk_state_id": 69,
+        "bnk_state": "JUNAGADH"
+    },
+    {
+        "bnk_state_id": 70,
+        "bnk_state": "KA"
+    },
+    {
+        "bnk_state_id": 71,
+        "bnk_state": "KACHCHH"
+    },
+    {
+        "bnk_state_id": 72,
+        "bnk_state": "KAMRUP"
+    },
+    {
+        "bnk_state_id": 73,
+        "bnk_state": "KAMRUP METROPOLITAN"
+    },
+    {
+        "bnk_state_id": 74,
+        "bnk_state": "KARANATAKA"
+    },
+    {
+        "bnk_state_id": 75,
+        "bnk_state": "KARIMNAGAR"
+    },
+    {
+        "bnk_state_id": 76,
+        "bnk_state": "KARNATAKA"
+    },
+    {
+        "bnk_state_id": 77,
+        "bnk_state": "KEONJHAR"
+    },
+    {
+        "bnk_state_id": 78,
+        "bnk_state": "KERALA"
+    },
+    {
+        "bnk_state_id": 79,
+        "bnk_state": "KHURDA"
+    },
+    {
+        "bnk_state_id": 80,
+        "bnk_state": "KINNAUR"
+    },
+    {
+        "bnk_state_id": 81,
+        "bnk_state": "KOLAR"
+    },
+    {
+        "bnk_state_id": 82,
+        "bnk_state": "KRISHNA"
+    },
+    {
+        "bnk_state_id": 83,
+        "bnk_state": "KRISHNAGIRI"
+    },
+    {
+        "bnk_state_id": 84,
+        "bnk_state": "KULU"
+    },
+    {
+        "bnk_state_id": 85,
+        "bnk_state": "KURUKSHETRA"
+    },
+    {
+        "bnk_state_id": 86,
+        "bnk_state": "LAKSHADWEEP"
+    },
+    {
+        "bnk_state_id": 87,
+        "bnk_state": "LUDHIANA"
+    },
+    {
+        "bnk_state_id": 88,
+        "bnk_state": "MADHYA PRADESH"
+    },
+    {
+        "bnk_state_id": 89,
+        "bnk_state": "MADHYAPRADESH"
+    },
+    {
+        "bnk_state_id": 90,
+        "bnk_state": "MAHARASHTRA"
+    },
+    {
+        "bnk_state_id": 91,
+        "bnk_state": "MANIPUR"
+    },
+    {
+        "bnk_state_id": 92,
+        "bnk_state": "MANSA"
+    },
+    {
+        "bnk_state_id": 93,
+        "bnk_state": "MEERUT"
+    },
+    {
+        "bnk_state_id": 94,
+        "bnk_state": "MEGHALAYA"
+    },
+    {
+        "bnk_state_id": 95,
+        "bnk_state": "MH"
+    },
+    {
+        "bnk_state_id": 96,
+        "bnk_state": "MIZORAM"
+    },
+    {
+        "bnk_state_id": 97,
+        "bnk_state": "MP"
+    },
+    {
+        "bnk_state_id": 98,
+        "bnk_state": "NADIA"
+    },
+    {
+        "bnk_state_id": 99,
+        "bnk_state": "NAGALAND"
+    },
+    {
+        "bnk_state_id": 100,
+        "bnk_state": "NAGAPATTINAM"
+    },
+    {
+        "bnk_state_id": 101,
+        "bnk_state": "NALGONDA"
+    },
+    {
+        "bnk_state_id": 102,
+        "bnk_state": "NARSIMHAPUR"
+    },
+    {
+        "bnk_state_id": 103,
+        "bnk_state": "NASIK"
+    },
+    {
+        "bnk_state_id": 104,
+        "bnk_state": "NAVSARI"
+    },
+    {
+        "bnk_state_id": 105,
+        "bnk_state": "NCT OF DELHI"
+    },
+    {
+        "bnk_state_id": 106,
+        "bnk_state": "NEW DELHI"
+    },
+    {
+        "bnk_state_id": 107,
+        "bnk_state": "ODISHA"
+    },
+    {
+        "bnk_state_id": 108,
+        "bnk_state": "ORISSA"
+    },
+    {
+        "bnk_state_id": 109,
+        "bnk_state": "PANJAB"
+    },
+    {
+        "bnk_state_id": 110,
+        "bnk_state": "PASCHIMI SINGHBHUM"
+    },
+    {
+        "bnk_state_id": 111,
+        "bnk_state": "PONDICHERRY"
+    },
+    {
+        "bnk_state_id": 112,
+        "bnk_state": "PRAKASAM"
+    },
+    {
+        "bnk_state_id": 113,
+        "bnk_state": "PUDUCHERRY"
+    },
+    {
+        "bnk_state_id": 114,
+        "bnk_state": "PUNE"
+    },
+    {
+        "bnk_state_id": 115,
+        "bnk_state": "PUNJAB"
+    },
+    {
+        "bnk_state_id": 116,
+        "bnk_state": "PURBA MEDINIPUR"
+    },
+    {
+        "bnk_state_id": 117,
+        "bnk_state": "RAJASTAN"
+    },
+    {
+        "bnk_state_id": 118,
+        "bnk_state": "RAJASTHAN"
+    },
+    {
+        "bnk_state_id": 119,
+        "bnk_state": "RAJKOT"
+    },
+    {
+        "bnk_state_id": 120,
+        "bnk_state": "RANCHI"
+    },
+    {
+        "bnk_state_id": 121,
+        "bnk_state": "RANGAREDDY"
+    },
+    {
+        "bnk_state_id": 122,
+        "bnk_state": "RATLAM"
+    },
+    {
+        "bnk_state_id": 123,
+        "bnk_state": "RI BHOI"
+    },
+    {
+        "bnk_state_id": 124,
+        "bnk_state": "RUPNAGAR"
+    },
+    {
+        "bnk_state_id": 125,
+        "bnk_state": "SABAR KANTHA"
+    },
+    {
+        "bnk_state_id": 126,
+        "bnk_state": "SAHARANPUR"
+    },
+    {
+        "bnk_state_id": 127,
+        "bnk_state": "SAHEBGANJ"
+    },
+    {
+        "bnk_state_id": 128,
+        "bnk_state": "SAHIBZADA AJIT SINGH NAGAR"
+    },
+    {
+        "bnk_state_id": 129,
+        "bnk_state": "SANGRUR"
+    },
+    {
+        "bnk_state_id": 130,
+        "bnk_state": "SATARA"
+    },
+    {
+        "bnk_state_id": 131,
+        "bnk_state": "SHRAVASTI"
+    },
+    {
+        "bnk_state_id": 132,
+        "bnk_state": "SIDHI"
+    },
+    {
+        "bnk_state_id": 133,
+        "bnk_state": "SIKKIM"
+    },
+    {
+        "bnk_state_id": 134,
+        "bnk_state": "SIMLA"
+    },
+    {
+        "bnk_state_id": 135,
+        "bnk_state": "SOUTH 24 PARGANAS"
+    },
+    {
+        "bnk_state_id": 136,
+        "bnk_state": "SOUTH GOA"
+    },
+    {
+        "bnk_state_id": 137,
+        "bnk_state": "SURAT"
+    },
+    {
+        "bnk_state_id": 138,
+        "bnk_state": "TAMIL NADU"
+    },
+    {
+        "bnk_state_id": 139,
+        "bnk_state": "TAMILNADU"
+    },
+    {
+        "bnk_state_id": 140,
+        "bnk_state": "TELANGANA"
+    },
+    {
+        "bnk_state_id": 141,
+        "bnk_state": "TELENGANA"
+    },
+    {
+        "bnk_state_id": 142,
+        "bnk_state": "THANE"
+    },
+    {
+        "bnk_state_id": 143,
+        "bnk_state": "THIRUVALLUR"
+    },
+    {
+        "bnk_state_id": 144,
+        "bnk_state": "THIRUVANANTHAPURAM"
+    },
+    {
+        "bnk_state_id": 145,
+        "bnk_state": "THRISSUR"
+    },
+    {
+        "bnk_state_id": 146,
+        "bnk_state": "TIRUCHIRAPALLI"
+    },
+    {
+        "bnk_state_id": 147,
+        "bnk_state": "TN"
+    },
+    {
+        "bnk_state_id": 148,
+        "bnk_state": "TOOTHUKUDI"
+    },
+    {
+        "bnk_state_id": 149,
+        "bnk_state": "TRIPURA"
+    },
+    {
+        "bnk_state_id": 150,
+        "bnk_state": "UP"
+    },
+    {
+        "bnk_state_id": 151,
+        "bnk_state": "UT OF DAMAN AND DIU"
+    },
+    {
+        "bnk_state_id": 152,
+        "bnk_state": "UTTAR PRADESH"
+    },
+    {
+        "bnk_state_id": 153,
+        "bnk_state": "UTTARAKHAND"
+    },
+    {
+        "bnk_state_id": 154,
+        "bnk_state": "UTTARANCHAL"
+    },
+    {
+        "bnk_state_id": 155,
+        "bnk_state": "UTTARPRADESH"
+    },
+    {
+        "bnk_state_id": 156,
+        "bnk_state": "UTTRAKHAND"
+    },
+    {
+        "bnk_state_id": 157,
+        "bnk_state": "VADODARA"
+    },
+    {
+        "bnk_state_id": 158,
+        "bnk_state": "VISHAKHAPATNAM"
+    },
+    {
+        "bnk_state_id": 159,
+        "bnk_state": "VPO - KHANDWA PATTA CHURU, DIST CHURU"
+    },
+    {
+        "bnk_state_id": 160,
+        "bnk_state": "WARANGAL"
+    },
+    {
+        "bnk_state_id": 161,
+        "bnk_state": "WEST BENGAL"
+    },
+    {
+        "bnk_state_id": 162,
+        "bnk_state": "WESTBENGAL"
+    }
+]
