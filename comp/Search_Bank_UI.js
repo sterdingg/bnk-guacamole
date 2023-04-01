@@ -1,6 +1,6 @@
 import Breadcumb from "./Breadcumb";
 import Bnk_dtl_main_Table from "./bankdetails_page/Bnk_dtl_main_Table";
-import Sidebar from "./sidebar";
+import Sidebar from "./Sidebar";
 
 function Search_Bank_UI(props) {
   return (

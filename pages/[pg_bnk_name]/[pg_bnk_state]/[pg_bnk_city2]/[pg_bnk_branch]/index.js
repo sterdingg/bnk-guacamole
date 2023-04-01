@@ -4,7 +4,7 @@ import bankname_db from '../../../../../json/bank_name'
 import Bnk_details from "@/comp/Bnk_details";
 import HeadSeo from "@/comp/HeadSeo";
 import Breadcumb from "@/comp/Breadcumb";
-import Sidebar from "@/comp/sidebar";
+import Sidebar from "@/comp/Sidebar";
 
 function index() {
     var [bank_db_filtered, setbank_db_filtered] = useState([]);
