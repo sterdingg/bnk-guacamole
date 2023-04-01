@@ -1,12 +1,14 @@
 import CopyToClipboard from "react-copy-to-clipboard";
+import Bnk_dtl_main_Table from "./bankdetails_page/Bnk_dtl_main_Table";
 
 function Bnk_details(props) {
   return (
     <div>
       {
         props.data_display.map((item) =>
-          <div key={item.IFSC} className='container mb-3 text-break mt-2  border-bottom carddds'>
-            <b><u>Bank Name</u></b> : <span className="at_span_bank_name">{item.BANK}</span>
+          <div key={item.IFSC} className={`container mb-3 text-break mt-2 ${props.data_display.length>1?"border-bottom":""} carddds`}>
+            <Bnk_dtl_main_Table item={item}/> 
+            {/* <b><u>Bank Name</u></b> : <span className="at_span_bank_name">{item.BANK}</span>
             <p><b><u>Bank State</u></b>&nbsp; : {item.STATE}</p>
             <p><b><u>Branch Name</u></b> : <span className="at_span_bank_branch">{item.BRANCH}</span></p>
             <p><b><u>Bank Address</u></b> : {item.ADDRESS}</p>
@@ -23,10 +25,10 @@ function Bnk_details(props) {
               <div className="collapse" id={`contact-${item.IFSC}`}>
                 <p >STD CODE: {item.STD_CODE}&nbsp;| &nbsp;Phone Number: {item.PHONE}</p>
               </div>
-            </>
+            </> */}
 
             {/* ----- */}
-            <>
+            {/* <>
               <p>
                 <a className="btn" data-toggle="collapse" href={`#map-${item.IFSC}`} role="button" aria-expanded="false" aria-controls={`map-${item.IFSC}`}>Map Location <small>(Beta)</small></a>
               </p>
@@ -35,7 +37,7 @@ function Bnk_details(props) {
                 <p><a href={`https://www.google.com/maps/search/${item.BANK} ${item.BRANCH},${item.STATE}`} target="_blank"> Google Map</a></p>
 
               </div>
-            </>
+            </> */}
 
 
           </div>

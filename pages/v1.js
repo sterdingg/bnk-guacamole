@@ -2,6 +2,7 @@ import bankname_db from '../json/bank_name'
 import { useState } from "react";
 import Bnk_details from '@/comp/Bnk_details';
 import HeadSeo from '@/comp/HeadSeo';
+import { FcLibrary,FcNext } from "react-icons/fc";
 
 
 export default function index() {
@@ -112,7 +113,7 @@ export default function index() {
   return (
 
     <>
-    <HeadSeo/>
+      <HeadSeo />
 
       <div className="container col-xl-12 col-xxl-10 px-4 py-3">
         <div className="row lg-5 py-3">
@@ -194,16 +195,17 @@ export default function index() {
             {bdk_st_branch && bdk_st_branch && <div className='container-fluid flex center '>
               {bdk_st_branch !== undefined && bank_db_filtered.map((item) => {
                 if (item.BRANCH === "RTGS-HO") {
-                  return <p className='text-center'><a
+                  return <p className='text-center border-bottom'><a
                     href={`${item.BANK.replaceAll(" ", "_")}?s=${item.STATE.replaceAll(" ", "_")}&&c2=${item.CITY2.replaceAll(" ", "_")}&&bnh=${item.BRANCH.replaceAll(" ", "_")}`}
-                  >RTGS-HO Office details</a></p>
+                  ><FcLibrary/><FcNext/> RTGS-HO Office details</a></p>
                 }
               })}
-              <Bnk_details data_display={data_display} /></div>}
+              <Bnk_details data_display={data_display} />
+            </div>}
           </div> : ""}
         </div>
 
-       
+
 
       </div>
 

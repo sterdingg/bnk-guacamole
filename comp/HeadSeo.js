@@ -70,7 +70,6 @@ function HeadSeo(head_props) {
                     "url": "${head_props?.head_url}"
                 }`
             }
-            {console.log(head_props?.head_url)}
             </script> : ""}
             {/* for breadcumbs snippet */}
             {head_props?.headtype === "search_params" ? <script type="application/ld+json">{
