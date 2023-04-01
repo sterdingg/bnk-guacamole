@@ -38,8 +38,6 @@ function Bnk_details(props) {
 
               </div>
             </> */}
-
-
           </div>
         )
       }

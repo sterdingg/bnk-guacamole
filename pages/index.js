@@ -1,7 +1,6 @@
 import bankname_db from '../json/bank_name'
 import { useState } from "react";
 import { useRouter } from 'next/router';
-import Link from 'next/link'
 import HeadSeo from '@/comp/HeadSeo';
 
 

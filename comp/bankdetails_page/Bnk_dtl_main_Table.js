@@ -1,5 +1,7 @@
 import { FcSurvey } from "react-icons/fc";
 import { GrMap } from "react-icons/gr";
+import { TbPhone } from "react-icons/tb";
+import { TiContacts } from "react-icons/ti";
 import CopyToClipboard from "react-copy-to-clipboard";
 import Bnk_image from "./Bnk_image";
 import Ifsc_code_Map from "./Ifsc_code_Map";
@@ -46,9 +48,9 @@ function Bnk_dtl_main_Table(props) {
                                     <td colSpan="2">{props.item.ADDRESS}</td>
                                 </tr>
                                 <tr>
-                                    <td>Contact</td>
+                                    <td>Contact <TiContacts/></td>
                                     <td >STD : {props.item.STD_CODE} </td>
-                                    <td>Phone No : {props.item.PHONE}  <CopyToClipboard text={props.item.PHONE}><button className="btn btn-sm btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="right" title="Copy Number"><FcSurvey />Copy</button></CopyToClipboard></td>
+                                    <td><TbPhone/>: {props.item.PHONE} <CopyToClipboard text={props.item.PHONE}><button className="btn btn-sm btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="right" title="Copy Number"><FcSurvey />Copy</button></CopyToClipboard></td>
                                 </tr>
                                 <tr>
                                     <td>Map  <small>(Beta)</small></td>

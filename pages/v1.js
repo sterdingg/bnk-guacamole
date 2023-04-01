@@ -195,9 +195,9 @@ export default function index() {
             {bdk_st_branch && bdk_st_branch && <div className='container-fluid flex center '>
               {bdk_st_branch !== undefined && bank_db_filtered.map((item) => {
                 if (item.BRANCH === "RTGS-HO") {
-                  return <p className='text-center border-bottom'><a
+                  return <p className='text-center pb-3 border-bottom'><a
                     href={`${item.BANK.replaceAll(" ", "_")}?s=${item.STATE.replaceAll(" ", "_")}&&c2=${item.CITY2.replaceAll(" ", "_")}&&bnh=${item.BRANCH.replaceAll(" ", "_")}`}
-                  ><FcLibrary/><FcNext/> RTGS-HO Office details</a></p>
+                  ><FcLibrary/><FcNext/> RTGS-HO Office Details</a></p>
                 }
               })}
               <Bnk_details data_display={data_display} />

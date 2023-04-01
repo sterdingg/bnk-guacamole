@@ -13,10 +13,10 @@ function header(props) {
         <div className="align-items-end collapse navbar-collapse bavv " id="navbarSupportedContent" >
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/">Home</a>
+              <a className="nav-link" aria-current="page" href="/">Home</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/v1">IFSC Finder V1</a>
+              <a className="nav-link" href="/v1">IFSC Finder (SPA)</a>
             </li>
             {/* <li className="nav-item">
               <a className="nav-link" href="/Bankingcalender">Calender</a>

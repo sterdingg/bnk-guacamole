@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { useRouter } from 'next/router';
 import bankname_db from '../../json/bank_name'
-import Bnk_details from "@/comp/Bnk_details";
 import queryobject from 'query-object'
 import HeadSeo from "@/comp/HeadSeo";
 import Search_Bank_UI from "@/comp/Search_Bank_UI";

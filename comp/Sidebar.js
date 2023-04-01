@@ -2,7 +2,9 @@ function Sidebar() {
     return (
         <div className="col-lg-4">
                 <div className="sidebar">
-                  BANK IFSC-Code | QPkendra
+                  <p><b><u>BANK IFSC-Code | QPkendra</u></b></p>
+                  <p><b>IFSC</b>-Indian Financial System Code</p>
+                  <p><b>MICR</b>-Magnetic Ink Character Recognition.<br></br>(printed on Cheque Book) facilitate the processing of cheques</p>
                   {/* <div className="sidebar-item search-form">
                         <h3 className="sidebar-title">Search</h3>
                         <form action="" className="mt-3">
