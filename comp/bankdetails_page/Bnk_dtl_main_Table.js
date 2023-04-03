@@ -29,11 +29,11 @@ function Bnk_dtl_main_Table(props) {
                                 </tr>
                                 <tr>
                                     <td>Bank Code</td>
-                                    <td colSpan="2" className="ifsc_code_caption ifsccode-text">{props.item.IFSC.slice(0, 5)}<p>(First 5 Letters of IFSC Code)</p></td>
+                                    <td colSpan="2" className="ifsc_code_caption ifsccode-text">{props.item.IFSC?.slice(0, 5)}<p>(First 5 Letters of IFSC Code)</p></td>
                                 </tr>
                                 <tr>
                                     <td>Branch Code</td>
-                                    <td colSpan="2" className="ifsc_code_caption ifsccode-text">{props.item.IFSC.slice(-6)}<p>(Last 6 Letters of IFSC Code)</p></td>
+                                    <td colSpan="2" className="ifsc_code_caption ifsccode-text">{props.item.IFSC?.slice(-6)}<p>(Last 6 Letters of IFSC Code)</p></td>
                                 </tr>
                                 <tr>
                                     <td>State</td>

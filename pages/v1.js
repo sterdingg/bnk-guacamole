@@ -114,10 +114,9 @@ export default function index() {
 
     <>
       <HeadSeo />
-
       <div className="container col-xl-12 col-xxl-10 px-4 py-3">
         <div className="row lg-5 py-3">
-          <div className="col-lg-5 text-center text-lg-start py-4 mb-3 sectionn sect1">
+          <div className="col-lg-5 text-center text-lg-start py-4 mb-3 sectionn sect1 align-middle">
             <h1 className="display-4 fw-bold lh-1 mb-3">Banking IFSC Codes</h1>
             {/* <p className="col-lg-10 fs-4">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p> */}
             <form className="container pt-3">
@@ -191,11 +190,11 @@ export default function index() {
               </div>
             </form>
           </div>
-          {bdk_st_branch !== undefined && bank_db_filtered != undefined ? <div className="pl-3 col-md-11 mx-auto col-lg-6 sectionn sidesection">
+          {(data_display[0]?.IFSC!==undefined) && (bdk_st_branch !== undefined) && (bank_db_filtered != undefined) ? <div className="pl-3 col-md-11 mx-auto col-lg-6 sectionn sidesection">
             {bdk_st_branch && bdk_st_branch && <div className='container-fluid flex center '>
-              {bdk_st_branch !== undefined && bank_db_filtered.map((item) => {
+              {(data_display[0]?.IFSC!==undefined) && (bdk_st_branch !== undefined) && bank_db_filtered.map((item) => {
                 if (item.BRANCH === "RTGS-HO") {
-                  return <p className='text-center pb-3 border-bottom'><a
+                  return <p key={item.IFSC} className='text-center pb-3 border-bottom'><a
                     href={`${item.BANK.replaceAll(" ", "_")}?s=${item.STATE.replaceAll(" ", "_")}&&c2=${item.CITY2.replaceAll(" ", "_")}&&bnh=${item.BRANCH.replaceAll(" ", "_")}`}
                   ><FcLibrary/><FcNext/> RTGS-HO Office Details</a></p>
                 }

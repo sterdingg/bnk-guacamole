@@ -1,11 +1,18 @@
 import Head from "next/head";
-
 function HeadSeo(head_props) {
     var headSeoData = {};
     if (head_props?.headtype === "search_params") {
         headSeoData.title = `IFSC Code for ${head_props?.head_data?.bnh?.replaceAll("_", " ")} Branch of ${head_props?.bank_name?.replaceAll("_", " ")} | QPkendra`
         headSeoData.description = `IFSC Code for ${head_props?.bank_name?.replaceAll("_", " ")} of ${head_props?.head_data?.c2?.replaceAll("_", " ")},${head_props?.head_data?.s?.replaceAll("_", " ")} for ${head_props?.head_data?.bnh?.replaceAll("_", " ")} Branch is ${head_props?.len[0]?.IFSC}.`
         headSeoData.url = head_props?.head_url;
+    }
+    else if (head_props?.headtype === "ifsc_search_params") {
+        if (typeof window !== 'undefined') {
+            var hostname = window.location.hostname;
+         }
+        headSeoData.title = `IFSC Code ${head_props?.len[0].IFSC} :${head_props?.head_data?.bnh?.replaceAll("_", " ")} Branch of ${head_props?.bank_name?.replaceAll("_", " ")} | QPkendra`
+        headSeoData.description = `IFSC Code for ${head_props?.bank_name?.replaceAll("_", " ")} of ${head_props?.head_data?.c2?.replaceAll("_", " ")},${head_props?.head_data?.s?.replaceAll("_", " ")} for ${head_props?.head_data?.bnh?.replaceAll("_", " ")} Branch is ${head_props?.len[0]?.IFSC}.`
+        headSeoData.url = "https://"+hostname+head_props?.head_url;
     }
     else if (head_props?.headtype === "Bank_Name_Page") {
         headSeoData.title = `${head_props?.bank_name} IFSC, MICR Code in India |IFSC Code`,
@@ -58,7 +65,7 @@ function HeadSeo(head_props) {
                 `{
                     "@context": "https://schema.org/",
                     "@type": "WebPage",
-                    "name": "IFSC Code for ${head_props?.head_data?.bnh?.replaceAll("_", " ")} Branch of ${head_props?.bank_name.replaceAll("_", " ")}",
+                    "name": "IFSC Code for ${head_props?.head_data?.bnh?.replaceAll("_", " ")} Branch of ${head_props?.bank_name?.replaceAll("_", " ")}",
                     "speakable": {
                         "@type": "SpeakableSpecification",
                         "cssSelector": [
@@ -101,10 +108,10 @@ function HeadSeo(head_props) {
                     "mainEntity": [
                         {
                             "@type": "Question",
-                            "name": "What is the IFSC code of ${head_props?.head_data?.bnh.replaceAll("_", " ")}, ${head_props?.bank_name?.replaceAll("_", " ")}?",
+                            "name": "What is the IFSC code of ${head_props?.head_data?.bnh?.replaceAll("_", " ")}, ${head_props?.bank_name?.replaceAll("_", " ")}?",
                             "acceptedAnswer": {
                                 "@type": "Answer",
-                                "text": "The IFSC code of ${head_props?.head_data?.bnh.replaceAll("_", " ")}, ${head_props?.bank_name?.replaceAll("_", " ")} is ${head_props?.len[0]?.IFSC}"
+                                "text": "The IFSC code of ${head_props?.head_data?.bnh?.replaceAll("_", " ")}, ${head_props?.bank_name?.replaceAll("_", " ")} is ${head_props?.len[0]?.IFSC}"
                             }
                         },
                         {

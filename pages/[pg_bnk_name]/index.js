@@ -36,7 +36,8 @@ function index() {
         })
 
         count = count + 1;
-    }
+    }   
+
     // for state set 
     if (count == 1) {
         bank_db_filtered !== undefined && bank_db_filtered.map((item) => {
@@ -81,7 +82,7 @@ function index() {
                     
                 </div>: ""
                 :
-
+                bank_db_filtered[0]?.BANK!==undefined?<>
                 <form className="container pt-3">
                     <HeadSeo headtype={"Bank_Name_Page"} head_url={window_params.url_href} bank_name={routerdata.asPath.replace("/","").replaceAll("_"," ")}/>
                     <div className="form-row">
@@ -103,6 +104,8 @@ function index() {
                         </div>
                     </div>
                 </form>
+                </>:""
+                
                 }
 
         </>
