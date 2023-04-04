@@ -16,6 +16,9 @@ function header(props) {
               <a className="nav-link" aria-current="page" href="/">Home</a>
             </li>
             <li className="nav-item">
+              <a className="nav-link" href="/ifsc">Bank Details With IFSC CODE</a>
+            </li>
+            <li className="nav-item">
               <a className="nav-link" href="/v1">IFSC Finder (SPA)</a>
             </li>
             {/* <li className="nav-item">

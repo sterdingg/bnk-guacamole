@@ -3,6 +3,7 @@ import bnk_data from '../../json/bank_name_1.json';
 import { useState } from "react";
 import HeadSeo from "@/comp/HeadSeo";
 import Search_Bank_UI from "@/comp/Search_Bank_UI";
+import Search_ifsc from "@/comp/Search_ifsc";
 
 function index() {
     let routdata = useRouter();
@@ -33,7 +34,13 @@ function index() {
             {(routdata?.query?.i!==undefined) && (bank_db_filtered?.STATE!==undefined) &&  (head_data.bnh!==undefined) && (routdata?.query?.i?.length === 11)? <div className="pt-4">
                 <HeadSeo headtype={"ifsc_search_params"} head_url={routdata?.asPath} head_data={head_data} bank_name={bank_db_filtered?.BANK?.replaceAll("_", " ")} len={[bank_db_filtered]} />
                 <Search_Bank_UI data_display={[bank_db_filtered]} head_url={routdata?.asPath} breadcrumb_ifsc={routdata?.asPath} is_ifsc_aspath={true} />
-            </div> : ""}
+            </div> : 
+            <>
+            <HeadSeo/>
+            <Search_ifsc bnk_data={bnk_data}/>
+            </>
+
+            }
 
         </>
     );
