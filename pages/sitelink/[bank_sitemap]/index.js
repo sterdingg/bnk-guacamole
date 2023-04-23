@@ -22,9 +22,11 @@ function index() {
         bank_db_filtered[0]?.IFSC!==undefined?<>
         <HeadSeo headtype={"Bank_Name_Page"} bank_name={routerdata?.query?.bank_sitemap}/>
         <div className='container pt-4 pb-4'>
+            <ol>
             {bank_db_filtered && bank_db_filtered.map((item)=>{
-                return  <p key={item.IFSC}><a href={`/${item.BANK.replaceAll(" ","_")}?s=${item.STATE.replaceAll(" ","_")}&c2=${item.CITY2.replaceAll(" ","_")}&bnh=${item.BRANCH.replaceAll(" ","_")}`} prefetch="false" >{`${item.STATE} / ${item.CITY2} / ${item.BRANCH}`}</a></p>
+                return  <li><p key={item.IFSC}><a href={`/${item.BANK.replaceAll(" ","_")}?s=${item.STATE.replaceAll(" ","_")}&c2=${item.CITY2.replaceAll(" ","_")}&bnh=${item.BRANCH.replaceAll(" ","_")}`} prefetch="false" >{`${item.STATE} / ${item.CITY2} / ${item.BRANCH}`}</a></p></li>
             })}
+            </ol>
         </div>
         </>:""
     );

@@ -10,10 +10,10 @@ function index() {
     var [bank_db_filtered, setbank_db_filtered] = useState([]);
     if (routdata?.query?.i && routdata?.query?.i!==undefined && routdata?.query?.i?.length === 11) {
         bnk_data.map(async (item) => {
-            if (item.IFSC.slice(0, 4) === routdata?.query?.i.slice(0, 4)) {
+            if (item.IFSC.slice(0, 4).toLowerCase() === routdata?.query?.i.slice(0, 4).toLowerCase()) {
                 const nda = (await import(`../../json/${item.bank_id}.json`)).default;
                 nda !== undefined && nda !== null ? (nda.map((item) => {
-                    if (item.IFSC === routdata?.query?.i) {
+                    if (item.IFSC.toLowerCase() === routdata?.query?.i.toLowerCase()) {
                         setbank_db_filtered(item)
                     }
                 })
