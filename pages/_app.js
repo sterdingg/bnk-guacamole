@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }) {
   },[])
   return(
     <>
-      {/* <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX" />
+      <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-003B9GS1D4" />
       <Script
         id='google-analytics'
         strategy="afterInteractive"
@@ -18,12 +18,10 @@ export default function App({ Component, pageProps }) {
           __html: `window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
-                gtag('config', 'G-XXXXXXX', {
-                  page_path: window.location.pathname,
-                });
+                gtag('config', 'G-003B9GS1D4');
                 `,
         }}
-      /> */}
+      />
     <Component {...pageProps} />
     </>
   )
