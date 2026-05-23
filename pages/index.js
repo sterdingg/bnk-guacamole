@@ -45,9 +45,25 @@ export default function index() {
             </div>
           </div>
         </form>
-                
-       
       </>
+      
+      <div className="container mt-5">
+        <h2 className="mb-4">Browse Banks by Name</h2>
+        <div className="row">
+          <div className="col-12">
+            <ul className="list-group">
+              {bankname_db.map((item) => (
+                <li key={`link-${item.bank_id}`} className="list-group-item">
+                  <a href={`/${item.BANK_NAME.replaceAll(" ", "_")}`} style={{ textDecoration: 'none', display: 'block' }}>
+                    {item.BANK_NAME}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+
 
     </>
   )

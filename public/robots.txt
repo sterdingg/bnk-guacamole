@@ -78,3 +78,6 @@ Disallow: /Logo/
 
 Disallow: /example-subfolder/
 
+
+Sitemap: https://bankifsccode.qpkendra.com/sitemap_index.xml
+
