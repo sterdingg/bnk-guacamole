@@ -75,9 +75,6 @@ Disallow: /blog/
 
 Disallow: /Logo/
 
-User-agent: Googlebot 
-
-Crawl-delay: 2000
 
 Disallow: /example-subfolder/
 
