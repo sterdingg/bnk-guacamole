@@ -5,9 +5,20 @@ import path from 'path';
 import bankname_db from '../../json/bank_name.json';
 
 function BankIndex({ bankName, bankUrlName, states }) {
+    const head_url = `https://bankifsccode.qpkendra.com/${bankUrlName}`;
+    const breadcrumbs = [
+        { name: "Home", url: "https://bankifsccode.qpkendra.com" },
+        { name: bankName, url: head_url }
+    ];
+
     return (
         <>
-            <HeadSeo headtype={"Bank_Name_Page"} bank_name={bankName} />
+            <HeadSeo 
+                headtype={"Bank_Name_Page"} 
+                bank_name={bankName} 
+                head_url={head_url}
+                breadcrumbs={breadcrumbs}
+            />
             <div className="container pt-4">
                 <h1 className="mb-4">Select State for {bankName}</h1>
                 <div className="row">

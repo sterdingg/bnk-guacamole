@@ -5,6 +5,14 @@ import path from 'path';
 import bankname_db from '../../../../json/bank_name.json';
 
 function CityIndex({ bankName, bankUrlName, stateName, stateUrlName, cityName, cityUrlName, branches }) {
+    const head_url = `https://bankifsccode.qpkendra.com/${bankUrlName}/${stateUrlName}/${cityUrlName}`;
+    const breadcrumbs = [
+        { name: "Home", url: "https://bankifsccode.qpkendra.com" },
+        { name: bankName, url: `https://bankifsccode.qpkendra.com/${bankUrlName}` },
+        { name: stateName, url: `https://bankifsccode.qpkendra.com/${bankUrlName}/${stateUrlName}` },
+        { name: cityName, url: head_url }
+    ];
+
     return (
         <>
             <HeadSeo 
@@ -14,6 +22,8 @@ function CityIndex({ bankName, bankUrlName, stateName, stateUrlName, cityName, c
                     pg_bnk_state: stateUrlName,
                     pg_bnk_city2: cityUrlName
                 }} 
+                head_url={head_url}
+                breadcrumbs={breadcrumbs}
             />
             <div className="container pt-4">
                 <nav aria-label="breadcrumb">

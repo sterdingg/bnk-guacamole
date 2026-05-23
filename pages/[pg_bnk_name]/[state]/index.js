@@ -5,9 +5,22 @@ import path from 'path';
 import bankname_db from '../../../json/bank_name.json';
 
 function StateIndex({ bankName, bankUrlName, stateName, stateUrlName, cities }) {
+    const head_url = `https://bankifsccode.qpkendra.com/${bankUrlName}/${stateUrlName}`;
+    const breadcrumbs = [
+        { name: "Home", url: "https://bankifsccode.qpkendra.com" },
+        { name: bankName, url: `https://bankifsccode.qpkendra.com/${bankUrlName}` },
+        { name: stateName, url: head_url }
+    ];
+
     return (
         <>
-            <HeadSeo headtype={"Bank_State_Page"} bank_name={bankName} bank_state={stateName} />
+            <HeadSeo 
+                headtype={"Bank_State_Page"} 
+                bank_name={bankName} 
+                bank_state={stateName} 
+                head_url={head_url}
+                breadcrumbs={breadcrumbs}
+            />
             <div className="container pt-4">
                 <nav aria-label="breadcrumb">
                     <ol className="breadcrumb">

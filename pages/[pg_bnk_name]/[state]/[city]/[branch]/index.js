@@ -15,6 +15,14 @@ function BranchIndex({ bankName, bankUrlName, stateName, stateUrlName, cityName,
     
     const head_url = `https://bankifsccode.qpkendra.com/${bankUrlName}/${stateUrlName}/${cityUrlName}/${branchUrlName}`;
 
+    const breadcrumbs = [
+        { name: "Home", url: "https://bankifsccode.qpkendra.com" },
+        { name: bankName, url: `https://bankifsccode.qpkendra.com/${bankUrlName}` },
+        { name: stateName, url: `https://bankifsccode.qpkendra.com/${bankUrlName}/${stateUrlName}` },
+        { name: cityName, url: `https://bankifsccode.qpkendra.com/${bankUrlName}/${stateUrlName}/${cityUrlName}` },
+        { name: branchName, url: head_url }
+    ];
+
     return (
         <div className="pt-4">
             <HeadSeo 
@@ -23,6 +31,7 @@ function BranchIndex({ bankName, bankUrlName, stateName, stateUrlName, cityName,
                 head_data={head_data} 
                 bank_name={bankName} 
                 len={[branchData]}
+                breadcrumbs={breadcrumbs}
             />
             
             <div className="container">
