@@ -79,6 +79,9 @@ export async function getStaticPaths() {
     };
 }
 
+// In-memory cache to prevent parsing large JSON files multiple times during the build process
+const bankJsonCache = {};
+
 export async function getStaticProps(context) {
     const pg_bnk_name = context.params.pg_bnk_name.replaceAll("_", " ");
     const state_name = context.params.state.replaceAll("_", " ");
@@ -89,10 +92,15 @@ export async function getStaticProps(context) {
         return { notFound: true };
     }
 
-    const jsonPath = path.join(process.cwd(), 'json', `${bank.bank_id}.json`);
     let bankData = [];
     try {
-        bankData = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
+        if (bankJsonCache[bank.bank_id]) {
+            bankData = bankJsonCache[bank.bank_id];
+        } else {
+            const jsonPath = path.join(process.cwd(), 'json', `${bank.bank_id}.json`);
+            bankData = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
+            bankJsonCache[bank.bank_id] = bankData;
+        }
     } catch (e) {
         return { notFound: true };
     }

@@ -1,10 +1,11 @@
 import Link from 'next/link';
 import HeadSeo from "@/comp/HeadSeo";
+import Search_Bank_UI from "@/comp/Search_Bank_UI";
 import fs from 'fs';
 import path from 'path';
 import bankname_db from '../../../../json/bank_name.json';
 
-function CityIndex({ bankName, bankUrlName, stateName, stateUrlName, cityName, cityUrlName, branches }) {
+function CityIndex({ bankName, bankUrlName, stateName, stateUrlName, cityName, cityUrlName, branchesData }) {
     const head_url = `https://bankifsccode.qpkendra.com/${bankUrlName}/${stateUrlName}/${cityUrlName}`;
     const breadcrumbs = [
         { name: "Home", url: "https://bankifsccode.qpkendra.com" },
@@ -16,12 +17,14 @@ function CityIndex({ bankName, bankUrlName, stateName, stateUrlName, cityName, c
     return (
         <>
             <HeadSeo 
-                headtype={"Bank_City_Page"} 
-                router_data={{
-                    pg_bnk_name: bankUrlName,
-                    pg_bnk_state: stateUrlName,
-                    pg_bnk_city2: cityUrlName
-                }} 
+                headtype={"search_params"} 
+                head_data={{
+                    bnh: "All Branches",
+                    c2: cityUrlName,
+                    s: stateUrlName
+                }}
+                bank_name={bankName}
+                len={branchesData}
                 head_url={head_url}
                 breadcrumbs={breadcrumbs}
             />
@@ -33,21 +36,9 @@ function CityIndex({ bankName, bankUrlName, stateName, stateUrlName, cityName, c
                         <li className="breadcrumb-item active" aria-current="page">{cityName}</li>
                     </ol>
                 </nav>
-                <h1 className="mb-4">Select Branch in {cityName}, {stateName} for {bankName}</h1>
-                <div className="row">
-                    <div className="col-12">
-                        <ul className="list-group">
-                            {branches.map((branch) => (
-                                <li key={branch} className="list-group-item">
-                                    <Link href={`/${bankUrlName}/${stateUrlName}/${cityUrlName}/${branch.replaceAll(" ", "_")}`} style={{ textDecoration: 'none', display: 'block' }}>
-                                        {branch}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                </div>
+                <h1 className="mb-4">All Branches in {cityName}, {stateName} for {bankName}</h1>
             </div>
+            <Search_Bank_UI data_display={branchesData} head_url={head_url} />
         </>
     );
 }
@@ -94,6 +85,9 @@ export async function getStaticPaths() {
     };
 }
 
+// In-memory cache to prevent parsing large JSON files multiple times during the build process
+const bankJsonCache = {};
+
 export async function getStaticProps(context) {
     const pg_bnk_name = context.params.pg_bnk_name.replaceAll("_", " ");
     const state_name = context.params.state.replaceAll("_", " ");
@@ -105,21 +99,24 @@ export async function getStaticProps(context) {
         return { notFound: true };
     }
 
-    const jsonPath = path.join(process.cwd(), 'json', `${bank.bank_id}.json`);
     let bankData = [];
     try {
-        bankData = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
+        if (bankJsonCache[bank.bank_id]) {
+            bankData = bankJsonCache[bank.bank_id];
+        } else {
+            const jsonPath = path.join(process.cwd(), 'json', `${bank.bank_id}.json`);
+            bankData = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
+            bankJsonCache[bank.bank_id] = bankData;
+        }
     } catch (e) {
         return { notFound: true };
     }
 
-    const branches = Array.from(new Set(
-        bankData
-            .filter(item => item.STATE === state_name && item.CITY2 === city_name)
-            .map(item => item.BRANCH)
-    )).sort();
+    const branchesData = bankData.filter(item => 
+        item.STATE === state_name && item.CITY2 === city_name
+    ).sort((a, b) => a.BRANCH.localeCompare(b.BRANCH));
 
-    if (branches.length === 0) {
+    if (branchesData.length === 0) {
         return { notFound: true };
     }
 
@@ -131,7 +128,7 @@ export async function getStaticProps(context) {
             stateUrlName: context.params.state,
             cityName: city_name,
             cityUrlName: context.params.city,
-            branches: branches
+            branchesData: branchesData
         }
     };
 }

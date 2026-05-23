@@ -63,14 +63,13 @@ function HeadSeo(head_props) {
 
     // Prepare BankOrCreditUnion JSON-LD
     let localBusinessJson = "";
-    if (head_props?.headtype === "search_params" && head_props?.len?.[0]) {
-        const branch = head_props.len[0];
-        localBusinessJson = JSON.stringify({
+    if (head_props?.headtype === "search_params" && head_props?.len && head_props.len.length > 0) {
+        const businesses = head_props.len.map(branch => ({
             "@context": "https://schema.org",
             "@type": "BankOrCreditUnion",
             "name": `${branch.BANK} - ${branch.BRANCH}`,
             "image": `https://${hostname}/assets/favicon.png`,
-            "url": head_props.head_url,
+            "url": `${head_props.head_url}#${branch.IFSC}`,
             "telephone": branch.CONTACT || "",
             "address": {
                 "@type": "PostalAddress",
@@ -81,6 +80,43 @@ function HeadSeo(head_props) {
             },
             "branchCode": branch.BRANCH,
             "identifier": branch.IFSC
+        }));
+        
+        // If it's a single item, return the object. If multiple, return the array
+        localBusinessJson = JSON.stringify(businesses.length === 1 ? businesses[0] : businesses);
+    }
+
+    // Prepare FAQ QnA Schema
+    let faqJson = "";
+    if (head_props?.headtype === "search_params" && head_props?.len && head_props.len.length > 0) {
+        const questions = [];
+        
+        // Only generate FAQs for up to the first 10 branches to prevent massive schema payloads
+        const displayBranches = head_props.len.slice(0, 10);
+        
+        displayBranches.forEach(branch => {
+            questions.push({
+                "@type": "Question",
+                "name": `What is the IFSC code of ${branch.BRANCH?.replaceAll("_", " ")}, ${branch.BANK?.replaceAll("_", " ")}?`,
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": `The IFSC code of ${branch.BRANCH?.replaceAll("_", " ")}, ${branch.BANK?.replaceAll("_", " ")} is ${branch.IFSC}`
+                }
+            });
+            questions.push({
+                "@type": "Question",
+                "name": `What is the address associated with ${branch.IFSC}`,
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": `The address associated with ${branch.IFSC} is ${branch.ADDRESS}`
+                }
+            });
+        });
+
+        faqJson = JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": questions
         });
     }
 
@@ -139,29 +175,8 @@ function HeadSeo(head_props) {
             )}
 
             {/* FAQ QnA Schema */}
-            {head_props?.headtype === "search_params" && (
-                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": [
-                        {
-                            "@type": "Question",
-                            "name": `What is the IFSC code of ${head_props?.head_data?.bnh?.replaceAll("_", " ")}, ${head_props?.bank_name?.replaceAll("_", " ")}?`,
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": `The IFSC code of ${head_props?.head_data?.bnh?.replaceAll("_", " ")}, ${head_props?.bank_name?.replaceAll("_", " ")} is ${head_props?.len?.[0]?.IFSC}`
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": `What is the address associated with ${head_props?.len?.[0]?.IFSC}`,
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": `The address associated with ${head_props?.len?.[0]?.IFSC} is ${head_props?.len?.[0]?.ADDRESS}`
-                            }
-                        }
-                    ]
-                })}} />
+            {faqJson && (
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: faqJson }} />
             )}
         </Head>
     );
