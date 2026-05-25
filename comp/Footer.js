@@ -1,16 +1,23 @@
+import Link from 'next/link';
+
 function Footer() {
   return (
-      <footer className="container py-3 my-4">
-        <ul className="nav justify-content-center border-bottom pb-2 mb-2">
-          <li className="nav-item"><a href="/" className="nav-link px-2 text-muted">Home</a></li>
-          {/* <li className="nav-item"><a href="#" className="nav-link px-2 text-muted">Features</a></li>
-      <li className="nav-item"><a href="#" className="nav-link px-2 text-muted">Pricing</a></li> */}
-          <li className="nav-item"><a href="/faq" className="nav-link px-2 text-muted">FAQ's</a></li>
-          <li className="nav-item"><a href="/about" className="nav-link px-2 text-muted">About</a></li>
+    <footer className="py-4 mt-5" style={{ backgroundColor: '#f8fafd', borderTop: '1px solid #e9ecef' }}>
+      <div className="container d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+        <div className="mb-3 mb-md-0">
+          <h5 className="fw-bold mb-1" style={{ color: '#0a194f' }}>BankIFSC Code</h5>
+          <p className="text-muted small mb-0">© 2024 BankIFSC Code. All rights reserved.<br/>Precise financial data for banking professionals.</p>
+        </div>
+        <ul className="nav justify-content-center justify-content-md-end list-unstyled d-flex flex-wrap">
+          <li className="ms-4 mb-2"><Link href="/about-us" className="text-muted text-decoration-none small fw-semibold">About Us</Link></li>
+          <li className="ms-4 mb-2"><Link href="/privacy-policy" className="text-muted text-decoration-none small fw-semibold">Privacy Policy</Link></li>
+          <li className="ms-4 mb-2"><Link href="/terms-of-service" className="text-muted text-decoration-none small fw-semibold">Terms of Service</Link></li>
+          <li className="ms-4 mb-2"><Link href="/contact-support" className="text-muted text-decoration-none small fw-semibold">Contact Support</Link></li>
+          <li className="ms-4 mb-2"><Link href="/api-docs" className="text-muted text-decoration-none small fw-semibold">API Docs</Link></li>
+          <li className="ms-4 mb-2"><Link href="/sitemap" className="text-muted text-decoration-none small fw-semibold">Sitemap</Link></li>
         </ul>
-        <p className="text-center footer22 text-muted">* The Data is consolidated from RBI's DataBase Provided on Offical site of RBI</p>
-        <p className="text-center text-muted">© 2023 BankIFSC-Code(QPkendra)</p>
-      </footer>
+      </div>
+    </footer>
   );
 }
 

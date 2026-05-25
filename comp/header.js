@@ -1,60 +1,35 @@
+import { BsBank, BsBoxArrowInRight, BsSearch } from 'react-icons/bs';
+
 function header(props) {
   return (
-    <header>
-      <nav className="navbar  navbar-expand-lg bg-body-tertiary">
-      <div className="container-fluid">
-        <a className="navbar-brand " href="/">
-          <img className="navimg" src="/assets/favicon.png" alt="Bootstrap" width="30" height="24" />BankIFSC Code
+    <header className="border-bottom bg-white">
+      <div className="container d-flex flex-wrap justify-content-between align-items-center py-3">
+        <a href="/v4" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none">
+          <BsBank className="me-2" size={24} color="#0a194f" />
+          <span className="fs-4 fw-bold" style={{ color: '#0a194f' }}>BankIFSC Code</span>
         </a>
-        
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="align-items-end collapse navbar-collapse bavv " id="navbarSupportedContent" >
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="/">Home</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/ifsc">Bank Details With IFSC CODE</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/v1">IFSC Finder (SPA)</a>
-            </li>
-            {/* <li className="nav-item">
-              <a className="nav-link" href="/Bankingcalender">Calender</a>
-            </li> */}
-            <li className="nav-item">
-              <a className="nav-link" href="/sitelink">SiteLink</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/faq">FAQ's</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/about">About</a>
-            </li>
-            {/* <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul className="dropdown-menu">
-            <li><a className="dropdown-item" href="#">Action</a></li>
-            <li><a className="dropdown-item" href="#">Another action</a></li>
-            <li><hr className="dropdown-divider"/></li>
-            <li><a className="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li> */}
 
-          </ul>
-          {/* <form className="d-flex" role="search">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-outline-success" type="submit">Search</button>
-      </form> */}
+        <ul className="nav nav-pills flex-grow-1 justify-content-center mb-3 mb-lg-0">
+          <li className="nav-item">
+            <a href="/v4" className="nav-link fw-semibold text-muted">Find IFSC</a>
+          </li>
+          <li className="nav-item">
+            <a href="/v4/searchifsc" className="nav-link fw-semibold text-muted">Search IFSC</a>
+          </li>
+
+          <li className="nav-item">
+            <a href="/banks-v4" className="nav-link fw-semibold" style={{ color: '#0a194f', borderBottom: '3px solid #0a194f', borderRadius: 0, paddingBottom: '0.4rem' }}>Banks</a>
+          </li>
+        </ul>
+        
+        <div className="d-flex align-items-center position-relative">
+          <div className="position-relative me-3 d-none d-md-block">
+            <BsSearch className="position-absolute text-muted" size={14} style={{ top: '10px', left: '12px' }} />
+            <input type="text" className="header-search" placeholder="Search..." />
+          </div>
         </div>
       </div>
-    </nav>
     </header>
-
   );
 }
 

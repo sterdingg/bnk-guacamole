@@ -9,6 +9,7 @@ const baseUrl = 'https://bankifsccode.qpkendra.com';
 
 // Add homepage
 xml += `  <url><loc>${baseUrl}</loc><changefreq>daily</changefreq></url>\n`;
+xml += `  <url><loc>${baseUrl}/v4</loc><changefreq>daily</changefreq></url>\n`;
 
 console.log("Generating clean sitemap for Option A...");
 
